@@ -1,0 +1,4 @@
+easy-rsa
+awk
+grep
+openvpn
