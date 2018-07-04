@@ -1,5 +1,7 @@
 # pki-docker
 
+**WARNING: THIS IMAGE DOES NOT FOLLOW GOOD SECURITY PRACTICES, SUCH AS NEVER SHARING KEYS WITH ANYBODY. ALL KEYS SHOULD BE KEPT SECRET AT ALL TIMES. I DO NOT TAKE ANY LIABILITY FOR ANY DAMAGES THAT ARISE BECAUSE OF THE USE OF THIS SCRIPT.**
+
 ## General
 pki-docker is a quick and dirty way to setup a public key infrastructure.
 
@@ -18,6 +20,3 @@ docker run --rm --mount type=bind,source="%cd%/certs",target=/openvpn --mount ty
 ```
 
 The easy-rsa data will be stored under ```easy-rsa/```, the certificates can be found under ```certs/```.
-
-**WARNING: THIS IMAGE DOES NOT FOLLOW GOOD SECURITY PRACTICES, SUCH AS NEVER SHARING KEYS WITH ANYBODY. ALL KEYS SHOULD BE KEPT SECRET AT ALL TIMES. I DO NOT TAKE ANY LIABILITY FOR ANY DAMAGES THAT ARISE BECAUSE OF THE USE OF THIS SCRIPT.**
-
