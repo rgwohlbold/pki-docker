@@ -10,13 +10,13 @@ keys and certificates are visible to the CA. Keys should only be distributed to 
 
 The command to run the image is 
 ```
-docker run --rm --mount type=bind,source="%cd%/certs",target=/openvpn --mount type=bind,source="<DIRECTORY"\easy-rsa",target=/etc/easy-rsa vpn-docker:latest /data/generate_keys.sh full
+docker run --rm --mount type=bind,source="<DIRECTORY>/certs",target=/openvpn --mount type=bind,source="<DIRECTORY"/easy-rsa",target=/etc/easy-rsa vpn-docker:latest /data/generate_keys.sh full
 ```
 This generates the CA, a server and a client certificate. 
 
 To generate additional clients when the CA is already established, run 
 ```
-docker run --rm --mount type=bind,source="%cd%/certs",target=/openvpn --mount type=bind,source="<DIRECTORY>\easy-rsa",target=/etc/easy-rsa vpn-docker:latest /data/generate_keys.sh client
+docker run --rm --mount type=bind,source="<DIRECTORY>/certs",target=/openvpn --mount type=bind,source="<DIRECTORY>/easy-rsa",target=/etc/easy-rsa vpn-docker:latest /data/generate_keys.sh client
 ```
 
 The easy-rsa data will be stored under ```easy-rsa/```, the certificates can be found under ```certs/```.
