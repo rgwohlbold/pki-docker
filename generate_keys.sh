@@ -7,7 +7,6 @@ ca() {
 
     # Copy CA certificate
     mkdir -p "$OUTDIR/ca"
-    cp "/etc/easy-rsa/pki/private/ca.key" "$OUTDIR/ca"
     cp "/etc/easy-rsa/pki/ca.crt" "$OUTDIR/ca"
 }
 
